@@ -168,7 +168,10 @@ public class FAccueil extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnNewButton.setSelected(!button.isSelected());
-		        
+				
+			   // FAccueil.this.setVisible(false);
+			    Fclients frame = new Fclients();
+			    frame.setVisible(true);
 			}
 			
 		});
