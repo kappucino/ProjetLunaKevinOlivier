@@ -113,6 +113,9 @@ public class FArticle extends JFrame {
 		btnNewButton_3.setContentAreaFilled(false);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				 FArticle.this.setVisible(false);
+				FAccueil frame = new FAccueil();
+			    frame.setVisible(true);
 			}
 		});
 		btnNewButton_3.setHorizontalAlignment(SwingConstants.LEFT);

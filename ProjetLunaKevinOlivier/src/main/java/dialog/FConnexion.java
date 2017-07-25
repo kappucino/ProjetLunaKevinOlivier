@@ -25,6 +25,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 import javax.swing.border.MatteBorder;
 
+import dao.GlobalConnecxion;
+
 public class FConnexion extends JFrame {
 
 	private JPanel contentPane;
@@ -137,6 +139,21 @@ public class FConnexion extends JFrame {
 		panel_3.setLayout(gbl_panel_3);
 		
 		JButton btnNewButton_2 = new JButton("Valider");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(GlobalConnecxion.getInstance() != null){
+					if(textField.getText().equals(anObject) ){
+						
+					}
+				}
+				
+				 FConnexion.this.setVisible(false);
+				FAccueil frame = new FAccueil();
+			    frame.setVisible(true);
+			    
+			}
+		});
 
 		btnNewButton_2.setRolloverEnabled(false); // turn on before rollovers work
 		btnNewButton_2.setRolloverIcon(new ImageIcon(FAccueil.class.getResource("/images/connection/Power-48-Actif.png")));
