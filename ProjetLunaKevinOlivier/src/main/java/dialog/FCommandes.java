@@ -114,6 +114,13 @@ public class FCommandes extends JFrame {
 		panel.add(btnValiderLaCommande);
 		
 		JButton button = new JButton("Accueil");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FCommandes.this.setVisible(false);
+				FAccueil frame = new FAccueil();
+			    frame.setVisible(true);
+			}
+		});
 		button.setIcon(new ImageIcon(FCommandes.class.getResource("/images/gestion/Home-48.png")));
 		button.setRolloverEnabled(false);
 		button.setFont(new Font("Tahoma", Font.BOLD, 14));

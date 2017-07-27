@@ -1,28 +1,26 @@
 package dialog;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.border.BevelBorder;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import javax.swing.JTextField;
-import java.awt.Color;
-import javax.swing.border.LineBorder;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 
 public class FConnexion extends JFrame {
@@ -137,6 +135,17 @@ public class FConnexion extends JFrame {
 		panel_3.setLayout(gbl_panel_3);
 		
 		JButton btnNewButton_2 = new JButton("Valider");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				textField.getText();
+				
+				 FConnexion.this.setVisible(false);
+				FAccueil frame = new FAccueil();
+			    frame.setVisible(true);
+			    
+			}
+		});
 
 		btnNewButton_2.setRolloverEnabled(false); // turn on before rollovers work
 		btnNewButton_2.setRolloverIcon(new ImageIcon(FAccueil.class.getResource("/images/connection/Power-48-Actif.png")));

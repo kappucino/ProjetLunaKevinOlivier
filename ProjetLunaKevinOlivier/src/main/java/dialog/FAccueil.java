@@ -149,6 +149,9 @@ public class FAccueil extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				button.setSelected(!button.isSelected());
+					FAccueil.this.setVisible(false);
+				    FArticle frame = new FArticle();
+				    frame.setVisible(true);
 			}
 		});
 		button.setIcon(new ImageIcon(FAccueil.class.getResource("/images/accueil/Product-128.png")));
@@ -169,7 +172,7 @@ public class FAccueil extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				btnNewButton.setSelected(!button.isSelected());
 				
-			   // FAccueil.this.setVisible(false);
+			    FAccueil.this.setVisible(false);
 			    Fclients frame = new Fclients();
 			    frame.setVisible(true);
 			}
@@ -189,6 +192,9 @@ public class FAccueil extends JFrame {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnNewButton_2.setSelected(!btnNewButton_2.isSelected());
+				FAccueil.this.setVisible(false);
+				FCommandes frame = new FCommandes();
+			    frame.setVisible(true);
 			}
 		});
 		btnNewButton_2.setIcon(new ImageIcon(FAccueil.class.getResource("/images/accueil/Shopping-Bag-128.png")));

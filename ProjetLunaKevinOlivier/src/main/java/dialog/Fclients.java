@@ -142,6 +142,9 @@ public class Fclients extends JFrame {
 		btnAccueil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnAccueil.setSelected(!btnAccueil.isSelected());
+				 Fclients.this.setVisible(false);
+				FAccueil frame = new FAccueil();
+			    frame.setVisible(true);
 			}
 		});
 		btnAccueil.setIcon(new ImageIcon(Fclients.class.getResource("/images/gestion/Home-48.png")));
